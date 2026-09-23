@@ -5,8 +5,9 @@
 @font-face { font-family: "IBM Plex Mono"; src: url("../../app/public/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
 * { box-sizing: border-box; margin: 0; }
 html, body { width: var(--w); height: var(--h); }
-body { display: grid; grid-template-columns: 1fr var(--img); background: #0C1B2E; font-family: "Instrument Sans", sans-serif; color: #F1F1EC; }
-.panel { position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: var(--pad); }
+html { background: transparent; }
+body { display: grid; grid-template-columns: 1fr var(--img); background: transparent; font-family: "Instrument Sans", sans-serif; color: #F1F1EC; }
+.panel { position: relative; background: #0C1B2E; display: flex; flex-direction: column; justify-content: space-between; padding: var(--pad); }
 .panel::before { content: ""; position: absolute; inset: 0; background:
   linear-gradient(to right, rgba(241,241,236,.07) 1px, transparent 1px) 0 0 / calc((100% - 2 * var(--pad)) / 3) 100%;
   left: var(--pad); right: var(--pad); }
@@ -14,7 +15,7 @@ body { display: grid; grid-template-columns: 1fr var(--img); background: #0C1B2E
 h1 { position: relative; font-weight: 440; font-size: var(--fs); line-height: 1.0; letter-spacing: -0.035em; }
 h1 span { color: #E74C26; }
 .meta { position: relative; display: flex; justify-content: space-between; font-family: "IBM Plex Mono", monospace; font-size: var(--mono); color: #9AA7B8; border-top: 1px solid rgba(241,241,236,.18); padding-top: calc(var(--mono) * 1.2); }
-.img { background: #716b66 url("IMAGE") center 40% / cover no-repeat; }
+.img { background: transparent; }
 </style></head>
 <body>
 <div class="panel">
