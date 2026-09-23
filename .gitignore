@@ -1,0 +1,14 @@
+node_modules
+app/dist
+app/.tanstack
+app/.nitro
+app/.output
+app/.wrangler
+*.log
+.DS_Store
+
+# Local-only stand-ins: the Higgsfield repository holds the vendored packages,
+# the lockfile and the production photographs (see README).
+app/packages/
+app/bun.lock
+app/public/images/
