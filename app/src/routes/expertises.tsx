@@ -14,7 +14,7 @@ export const Route = createFileRoute("/expertises")({
     pageHead({
       title: "Expertises : création, due diligence, contrôle interne | PRAXOR",
       description:
-        "Création et reprise, due diligence, contrôle interne, pilotage et gestion, transmission et cession, reporting : les expertises de PRAXOR Audit pour les dirigeants.",
+        "Création et reprise, due diligence, contrôle interne, pilotage, transmission et cession, reporting : les expertises de PRAXOR Audit à Paris.",
       path: PATH,
     }),
   component: ExpertisesPage,

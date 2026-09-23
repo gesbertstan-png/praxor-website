@@ -14,7 +14,7 @@ export const Route = createFileRoute("/expertise-comptable")({
     pageHead({
       title: "Expertise comptable à Paris | PRAXOR Audit",
       description:
-        "Expert-comptable à Paris 9e : comptes annuels, tenue comptable, consolidation, reporting, paie, fiscalité et juridique, avec des process intégrés (Pennylane, Silae).",
+        "Expert-comptable à Paris 9e : comptes annuels, tenue comptable, consolidation, reporting, paie, fiscalité et juridique, avec Pennylane et Silae.",
       path: PATH,
     }),
   component: ExpertiseComptablePage,

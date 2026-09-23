@@ -16,7 +16,7 @@ export const Route = createFileRoute("/le-cabinet")({
     pageHead({
       title: "Le cabinet PRAXOR Audit, experts-comptables à Paris 9e",
       description:
-        "PRAXOR Audit, société d’expertise comptable et de commissariat aux comptes dirigée par trois associés experts-comptables diplômés, au 12 rue du Helder, Paris 9e.",
+        "PRAXOR Audit, société d’expertise comptable et de commissariat aux comptes dirigée par trois associés experts-comptables diplômés, à Paris 9e.",
       path: PATH,
     }),
   component: CabinetPage,

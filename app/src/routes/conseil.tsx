@@ -15,7 +15,7 @@ export const Route = createFileRoute("/conseil")({
     pageHead({
       title: "Conseil aux dirigeants d’entreprise | PRAXOR Audit",
       description:
-        "Conseil aux dirigeants à Paris : création et reprise, transmission et cession, réorganisations juridiques, contrôle interne, reporting, due diligence et pilotage.",
+        "Conseil aux dirigeants à Paris : création, reprise, transmission, cession, réorganisations, contrôle interne, reporting et due diligence.",
       path: PATH,
     }),
   component: ConseilPage,

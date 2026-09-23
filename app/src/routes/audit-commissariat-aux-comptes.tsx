@@ -14,7 +14,7 @@ export const Route = createFileRoute("/audit-commissariat-aux-comptes")({
     pageHead({
       title: "Commissaire aux comptes et audit à Paris | PRAXOR Audit",
       description:
-        "Commissaire aux comptes à Paris : certification des comptes, commissariat aux apports, à la fusion et à la transformation, audit d’acquisition et audits contractuels.",
+        "Commissaire aux comptes à Paris : certification des comptes, commissariat aux apports et à la fusion, audit d’acquisition et audits contractuels.",
       path: PATH,
     }),
   component: AuditPage,
