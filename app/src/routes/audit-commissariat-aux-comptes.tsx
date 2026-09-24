@@ -114,6 +114,16 @@ function AuditPage() {
             <h2 id="role-title" className="heading reveal">
               Le rôle du commissaire aux comptes
             </h2>
+            <div className="reveal">
+              <h3 className="mono body-mute" style={{ fontWeight: 400, marginBottom: 8 }}>
+                Sa démarche s’articule autour de
+              </h3>
+              <ul className="ticks">
+                {AXES.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div className="split__body">
             <p className="lead reveal">
@@ -130,16 +140,6 @@ function AuditPage() {
               Nommé pour un mandat de six ans, il est lui-même régulièrement contrôlé par la compagnie
               régionale des commissaires aux comptes dont il relève.
             </p>
-            <div className="reveal">
-              <h3 className="mono body-mute" style={{ fontWeight: 400, marginBottom: 8, marginTop: 12 }}>
-                Sa démarche s’articule autour de
-              </h3>
-              <ul className="ticks">
-                {AXES.map((a) => (
-                  <li key={a}>{a}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@ function AuditPage() {
         </div>
       </section>
 
-      <section className="section dark" aria-labelledby="clientele-title">
+      <section className="section" style={{ background: "var(--paper-2)" }} aria-labelledby="clientele-title">
         <div className="wrap grid-12 split">
           <div className="split__head">
             <h2 id="clientele-title" className="heading reveal">
@@ -189,12 +189,12 @@ function AuditPage() {
             </h2>
           </div>
           <div className="split__body">
-            <p className="lead reveal" style={{ color: "var(--on-ink)" }}>
+            <p className="lead reveal">
               Le commissariat aux comptes est au cœur du métier du cabinet, pour une clientèle de grands
               comptes, de PME et d’associations.
             </p>
             <p className="reveal">
-              Auprès des grands comptes, nos équipes interviennent en co-commissariat aux comptes,
+              Auprès des grands comptes, le cabinet intervient en co-commissariat aux comptes,
               généralement aux côtés de cabinets d’audit internationaux. Le cabinet réalise également
               des missions d’audit légal pour des OPCVM et des sociétés du secteur bancaire.
             </p>

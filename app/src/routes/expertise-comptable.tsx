@@ -50,7 +50,7 @@ const MISSIONS = [
 const SERVICES = [
   {
     title: "Social et paie",
-    text: "Une équipe dédiée élabore vos documents obligatoires et limite les risques liés au respect du droit du travail.",
+    text: "Le cabinet élabore vos documents sociaux obligatoires et limite les risques liés au respect du droit du travail.",
     items: [
       "Bulletins de paie",
       "Déclarations sociales mensuelles, trimestrielles et annuelles",
@@ -81,7 +81,7 @@ const SERVICES = [
   },
   {
     title: "Informatique",
-    text: "Nos équipes maîtrisent le fonctionnement des ERP, dont SAP et Oracle, et interviennent dans les groupes qui les utilisent.",
+    text: "Le cabinet a réalisé des contrôles de procédures dans des groupes utilisant des ERP et maîtrise le fonctionnement de SAP et d’Oracle.",
     items: [
       "Intégration et import de données",
       "Tenue de comptabilité sous ERP",
@@ -133,8 +133,8 @@ function ExpertiseComptablePage() {
           </h2>
           <div className="split__body">
             <p className="lead reveal">
-              La qualité de la relation repose sur la capacité du cabinet à vous offrir des équipes
-              expérimentées et réactives, sur deux plans.
+              La qualité de la relation repose sur la capacité du cabinet à vous offrir des interlocuteurs
+              expérimentés et réactifs, sur deux plans.
             </p>
             <ul className="ticks reveal">
               <li>Le cœur de métier : le conseil en matière fiscale, sociale, comptable et financière.</li>
@@ -208,11 +208,26 @@ function ExpertiseComptablePage() {
             <h2 id="outils-title" className="heading reveal">
               Des process intégrés
             </h2>
+            <dl className="kv reveal">
+              <div>
+                <dt>Pennylane</dt>
+                <dd>Facturation, achats, comptabilité et trésorerie</dd>
+              </div>
+              <div>
+                <dt>Silae</dt>
+                <dd>Paie et gestion des ressources humaines</dd>
+              </div>
+            </dl>
+            <p className="body-mute reveal">
+              {fr(
+                "Silae garantit la qualité des bulletins ; son module de gestion des ressources humaines, avec planning intégré et circuit d’approbation, fiabilise le suivi des absences.",
+              )}
+            </p>
           </div>
           <div className="split__body">
             <p className="lead reveal">
               {fr(
-                "Le cabinet est partenaire privilégié de Pennylane, un logiciel qui réunit facturation, achats, comptabilité et trésorerie. Comme un ERP, il structure votre organisation administrative et comptable : toutes les opérations y sont intégrées, sans ressaisie ni export entre logiciels.",
+                "Le cabinet est partenaire privilégié de Pennylane. Comme un ERP, le logiciel structure votre organisation administrative et comptable : toutes les opérations y sont intégrées, sans ressaisie ni export entre logiciels.",
               )}
             </p>
             <ul className="ticks reveal">
@@ -221,11 +236,6 @@ function ExpertiseComptablePage() {
               <li>{fr("Comptabilité : synchronisation bancaire, immobilisations et emprunts, analytique, TVA, déclarations fiscales et comptes annuels.")}</li>
               <li>{fr("Trésorerie : gestion bancaire et paiements.")}</li>
             </ul>
-            <p className="body-mute reveal">
-              {fr(
-                "Pour la paie, le cabinet utilise Silae, qui garantit la qualité des bulletins, et met à votre disposition son module de gestion des ressources humaines : planning intégré et circuit d’approbation pour fiabiliser le suivi des absences.",
-              )}
-            </p>
           </div>
         </div>
       </section>

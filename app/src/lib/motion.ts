@@ -114,8 +114,9 @@ export function useActiveIndex(selector: string, initial = 0) {
 }
 
 /**
- * Counts up to `value` the first time the number scrolls into view. Server render and
- * no-JS show the final value; numbers already on screen at load are left untouched.
+ * Counts up to `value` when the number is about to scroll into view. The final value
+ * stays in the DOM until then (server render, crawlers, full-page captures and
+ * no-JS all read the real figure); numbers already on screen at load are untouched.
  */
 export function useCountUp<T extends HTMLElement>(value: number, duration = 1100) {
   const ref = useRef<T>(null);
@@ -123,7 +124,6 @@ export function useCountUp<T extends HTMLElement>(value: number, duration = 1100
     const el = ref.current;
     if (!el || prefersReducedMotion() || !("IntersectionObserver" in window)) return;
     if (el.getBoundingClientRect().top < window.innerHeight) return;
-    el.textContent = "0";
     let frame = 0;
     const io = new IntersectionObserver(
       ([entry]) => {
@@ -136,9 +136,11 @@ export function useCountUp<T extends HTMLElement>(value: number, duration = 1100
           el.textContent = String(Math.round(eased * value));
           if (t < 1) frame = window.requestAnimationFrame(tick);
         };
+        el.textContent = "0";
         frame = window.requestAnimationFrame(tick);
       },
-      { threshold: 0.6 },
+      // Fires just before the number enters the viewport, so the reset is never seen.
+      { rootMargin: "0px 0px 12% 0px", threshold: 0 },
     );
     io.observe(el);
     return () => {

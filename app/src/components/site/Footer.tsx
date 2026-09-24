@@ -15,8 +15,8 @@ export function Footer() {
           <div className="site-footer__brand">
             <Logo title="PRAXOR Audit" />
             <p>
-              Expertise comptable, audit et commissariat aux comptes, conseil aux dirigeants. Paris
-              9e.
+              Expertise comptable, audit et commissariat aux comptes, conseil aux dirigeants. Depuis{" "}
+              {FIRM.founded}.
             </p>
           </div>
 
@@ -54,8 +54,8 @@ export function Footer() {
 
         <div className="site-footer__legal">
           <p>
-            {FIRM.legalName}, société d’expertise comptable et de commissariat aux comptes au capital
-            de {FIRM.capital}, {FIRM.rcs}. Inscrite au tableau de l’Ordre des experts-comptables de la
+            {FIRM.legalName}, {FIRM.legalForm} d’expertise comptable et de commissariat aux comptes au
+            capital de {FIRM.capital}, {FIRM.rcs}. Inscrite au tableau de l’Ordre des experts-comptables de la
             région Paris Île-de-France. Commissaires aux comptes membres des Compagnies régionales de
             Paris et de Versailles.
           </p>

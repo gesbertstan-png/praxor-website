@@ -40,6 +40,12 @@ function ExpertisesPage() {
             transmission.
           </p>
         }
+        asideLabel="Métiers associés"
+        aside={[
+          { label: "Expertise comptable", to: "/expertise-comptable" },
+          { label: "Audit & commissariat aux comptes", to: "/audit-commissariat-aux-comptes" },
+          { label: "Conseil aux dirigeants", to: "/conseil" },
+        ]}
       />
 
       <section className="section" style={{ paddingTop: 0 }} aria-label="Domaines d’expertise">

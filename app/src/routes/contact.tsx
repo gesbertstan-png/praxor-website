@@ -66,10 +66,6 @@ function ContactPage() {
                 </dd>
               </div>
               <div className="coord">
-                <dt className="mono">Télécopie</dt>
-                <dd>{FIRM.faxDisplay}</dd>
-              </div>
-              <div className="coord">
                 <dt className="mono">E-mail</dt>
                 <dd>
                   <a href={`mailto:${FIRM.email}`}>{FIRM.email}</a>

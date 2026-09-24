@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import { Arrow } from "./Arrow";
 
-type AsideItem = { label: string; value?: string; href?: string };
+type AsideItem = { label: string; value?: string; href?: string; to?: string; hash?: string };
 
 type PageHeroProps = {
   crumb: string;
@@ -40,7 +40,12 @@ export function PageHero({ crumb, lines, lead, aside, asideLabel }: PageHeroProp
             <ul className="page-hero__aside" aria-label={asideLabel}>
               {aside.map((item) => (
                 <li key={item.label}>
-                  {item.href ? (
+                  {item.to ? (
+                    <Link to={item.to} hash={item.hash}>
+                      <span>{item.label}</span>
+                      <Arrow />
+                    </Link>
+                  ) : item.href ? (
                     <a href={item.href}>
                       <span>{item.label}</span>
                       <Arrow />

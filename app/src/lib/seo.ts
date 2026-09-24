@@ -52,11 +52,15 @@ export const ORGANIZATION_SCHEMA = JSON.stringify({
       logo: `${SITE_URL}/praxor-logo.svg`,
       image: OG_IMAGE,
       description:
-        "Société de commissariat aux comptes et d’expertise comptable à Paris, dirigée par trois associés experts-comptables diplômés : expertise comptable, audit et conseil aux dirigeants.",
+        "Société de commissariat aux comptes et d’expertise comptable créée en 1975, installée à Paris 9e et dirigée par trois associés experts-comptables diplômés : expertise comptable, audit et conseil aux dirigeants.",
       telephone: "+33142604008",
-      faxNumber: "+33142603026",
       email: FIRM.email,
       address: ADDRESS,
+      foundingDate: FIRM.foundedDate,
+      identifier: [
+        { "@type": "PropertyValue", propertyID: "SIREN", value: "308238393" },
+        { "@type": "PropertyValue", propertyID: "APE", value: FIRM.ape },
+      ],
       areaServed: { "@type": "City", name: "Paris" },
       knowsAbout: [
         "Expertise comptable",

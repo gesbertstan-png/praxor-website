@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { Arrow } from "../components/site/Arrow";
-import { Figures } from "../components/site/Figures";
+import { SinceBlock } from "../components/site/Figures";
 import { Keep } from "../components/site/Keep";
 import { ParisPlan } from "../components/site/ParisPlan";
 import { Picture } from "../components/site/Picture";
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
     const head = pageHead({
       title: "PRAXOR Audit | Expertise comptable, audit et conseil à Paris",
       description:
-        "PRAXOR Audit, cabinet d’expertise comptable et de commissariat aux comptes à Paris 9e. Trois associés experts-comptables, plus de 60 ans d’expérience cumulée.",
+        "PRAXOR Audit, cabinet d’expertise comptable et de commissariat aux comptes créé en 1975, à Paris 9e. Trois associés experts-comptables, de la PME à la société cotée.",
       path: "/",
     });
     return {
@@ -44,7 +44,7 @@ function Home() {
     <>
       <StructuredData json={ORGANIZATION_SCHEMA} />
       <Hero />
-      <Figures />
+      <SinceBlock />
       <Metiers />
       <Approche />
       <ExpertisesLedger />
@@ -110,7 +110,7 @@ function Hero() {
 
 function Metiers() {
   return (
-    <section className="section" aria-labelledby="metiers-title" style={{ paddingTop: 0 }}>
+    <section className="section" aria-labelledby="metiers-title">
       <div className="wrap">
         <div className="grid-12 section-intro">
           <h2 id="metiers-title" className="heading section-intro__title reveal">
@@ -161,13 +161,10 @@ function Approche() {
   return (
     <section className="section approche" aria-labelledby="approche-title">
       <div className="wrap grid-12">
-        <h2 id="approche-title" className="statement approche__statement reveal">
-          Un service ajusté aux spécificités de chaque entreprise.
-        </h2>
-        <div className="approche__media reveal-clip">
-          <Picture image="parquet" sizes="(max-width: 1023px) 100vw, 40vw" />
-        </div>
         <div className="approche__body">
+          <h2 id="approche-title" className="statement reveal">
+            Un service ajusté aux spécificités de chaque entreprise.
+          </h2>
           <p className="lead reveal">
             La valeur ajoutée de PRAXOR repose sur l’adaptation de son service aux spécificités
             structurelles, sectorielles et stratégiques de chaque client, pour des missions récurrentes
@@ -181,6 +178,9 @@ function Approche() {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="approche__media reveal-clip">
+          <Picture image="parquet" sizes="(max-width: 1023px) 100vw, 30vw" />
         </div>
       </div>
     </section>
@@ -203,16 +203,18 @@ function ExpertisesLedger() {
         <ul className="ledger">
           {EXPERTISES.map((x, i) => (
             <li key={x.slug} className="ledger__cell reveal" style={{ ["--d" as string]: `${(i % 3) * 70}ms` }}>
-              <span className="ledger__index mono">{x.index}</span>
+              <div className="ledger__top">
+                <span className="ledger__index mono">{x.index}</span>
+                <span className="ledger__go" aria-hidden="true">
+                  <Arrow />
+                </span>
+              </div>
               <h3 className="ledger__title">
                 <Link to="/expertises" hash={x.slug} className="stretched">
                   {x.title}
                 </Link>
               </h3>
               <p className="ledger__text">{fr(x.summary)}</p>
-              <span className="ledger__go" aria-hidden="true">
-                <Arrow />
-              </span>
             </li>
           ))}
         </ul>
@@ -265,7 +267,7 @@ function Paris() {
         <Picture image="toits" sizes="100vw" />
       </div>
       <div className="section">
-        <div className="wrap grid-12">
+        <div className="wrap grid-12 paris__grid">
           <div className="paris__address">
             <h2 id="paris-title" className="figures__title">
               {FIRM.name}, au cœur du 9e arrondissement

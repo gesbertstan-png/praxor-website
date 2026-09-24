@@ -29,8 +29,9 @@ function LegalPage() {
           <div className="prose" style={{ gridColumn: "1 / -1", maxWidth: "72ch" }}>
             <h2>Éditeur du site</h2>
             <p>
-              Le présent site est édité par {FIRM.legalName}, société d’expertise comptable et de
-              commissariat aux comptes au capital social de {FIRM.capital}, immatriculée au {FIRM.rcs}.
+              Le présent site est édité par {FIRM.legalName}, {FIRM.legalForm} d’expertise comptable et
+              de commissariat aux comptes au capital social de {FIRM.capital}, immatriculée au{" "}
+              {FIRM.rcs} (SIREN {FIRM.siren}), code APE {FIRM.ape}, créée le {FIRM.foundedLong}.
             </p>
             <p>
               Siège : {FIRM.street}, {FIRM.postalCode} {FIRM.city}. Téléphone : {FIRM.phoneDisplay}.

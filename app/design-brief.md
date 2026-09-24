@@ -30,16 +30,21 @@ Défense : le bleu nuit et le blanc cassé donnent l'autorité institutionnelle 
 - Pas de serif : l'autorité vient de l'échelle et de la grille.
 
 ## Section plan (accueil)
-1. Hero : split asymétrique, H1 sur 3 lignes à gauche, façade haussmannienne en portrait à droite, filets de grille qui se tracent.
-2. Repères : registre à 3 colonnes asymétriques (3/3/6), chiffres monumentaux, inscriptions ordinales en pied.
-3. Nos métiers : index de lignes pleine largeur (01, 02, 03), survol par balayage.
-4. Approche : déclaration monumentale, puis photo parquet point de Hongrie et liste « structurelles / sectorielles / stratégiques ».
-5. Expertises : tableau à filets 3 x 2, liens vers les ancres de la page Expertises.
-6. Philosophie de l'audit : section bleu nuit, colonne collante à gauche, cinq principes en très grand corps, mise en valeur au défilement.
-7. Paris : bandeau toits de zinc, adresse en très grand corps, coordonnées, plan de quartier au trait.
+1. Hero : split asymétrique, H1 sur 3 lignes à gauche, façade haussmannienne en portrait à droite, filets de grille.
+2. Depuis 1975 (papier teinté) : « Depuis 1975 » en chiffres monumentaux, phrase institutionnelle, puis 3 chiffres clés (3 associés, +60 ans d'expérience cumulée des associés, PME → cotées) et les inscriptions professionnelles.
+3. Nos métiers : intro titre / chapô sur deux colonnes, index de lignes pleine largeur (01, 02, 03).
+4. Approche (papier teinté) : déclaration, chapô et liste à gauche, photo parquet étirée à la même hauteur à droite.
+5. Expertises : tableau à filets 3 x 2, index et flèche sur la même ligne.
+6. Philosophie de l'audit : bleu nuit, colonne collante à gauche, cinq principes mis en valeur au défilement.
+7. Paris : bandeau toits de zinc, adresse en grand corps et plan de quartier au trait.
 8. Appel final + pied de page : bloc bleu nuit continu.
 
-Familles distinctes : split, registre, index de lignes, déclaration + image, tableau, liste collante sombre, bandeau + plan, appel. Aucune répétition consécutive.
+## Règles de rythme (passe « aucun vide inutile »)
+- `--section: clamp(52px, 6vw, 88px)` ; `--intro-gap: clamp(28px, 3.2vw, 48px)`. Deux sections de même fond ne cumulent jamais plus de ~170 px ; les sections alternent papier, papier teinté et bleu nuit.
+- Aucune hauteur artificielle (`min-height`, `100vh`) : chaque section prend la hauteur de son contenu. Les photos d'accompagnement s'étirent à la hauteur de la colonne de texte.
+- Colonnes : un titre de colonne gauche est collant ou accompagné de contenu (registre, liste, chapô) ; pas de colonne vide sous un titre court.
+- Contrôle automatique : aucune bande d'une seule couleur de plus de 140 px (desktop, laptop) ou 120 px (tablette, mobile).
+- Faits : « Depuis 1975 » = création du cabinet ; « +60 ans » = expérience cumulée des trois associés. Les deux ne sont jamais confondus. SIREN, forme juridique et code APE restent dans « Le cabinet », les mentions légales, le pied de page et les données structurées.
 
 ## Asset plan
 Trois photographies générées avec Higgsfield (gpt_image_2_5, 2K), sans personnes ni texte :

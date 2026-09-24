@@ -61,9 +61,9 @@ function ConseilPage() {
         }
         asideLabel="Expertises liées"
         aside={[
-          { label: "Création & reprise", href: "/expertises#creation-reprise" },
-          { label: "Transmission & cession", href: "/expertises#transmission-cession" },
-          { label: "Due diligence", href: "/expertises#due-diligence" },
+          { label: "Création & reprise", to: "/expertises", hash: "creation-reprise" },
+          { label: "Transmission & cession", to: "/expertises", hash: "transmission-cession" },
+          { label: "Due diligence", to: "/expertises", hash: "due-diligence" },
         ]}
       />
 
@@ -102,12 +102,12 @@ function ConseilPage() {
             <h2 id="gestion-title" className="heading reveal">
               Éclairer les choix de gestion
             </h2>
-          </div>
-          <div className="split__body">
             <p className="lead reveal">
               Nous conseillons les dirigeants dans leurs choix de gestion, et réalisons des missions
               ponctuelles lors des opérations qui engagent l’entreprise.
             </p>
+          </div>
+          <div className="split__body">
             <div className="quad reveal" style={{ borderTopColor: "var(--line)" }}>
               <div className="quad__cell">
                 <h3>Choix de gestion</h3>

@@ -1,5 +1,6 @@
 // Every fact on this site comes from praxor.fr (legacy pages under /fr/ and the
-// current homepage). Copy is modernised, never extended with new claims.
+// current homepage) or from the registry details supplied by the firm
+// (PRAXOR AUDIT, SIREN 308 238 393). Copy is modernised, never extended with new claims.
 
 /** Canonical origin. Switch to https://praxor.fr once the domain points here. */
 export const SITE_URL = "https://praxor-audit.higgsfield.app";
@@ -25,8 +26,14 @@ export const FIRM = {
   district: "Paris 9e",
   phoneDisplay: "+33 (0)1 42 60 40 08",
   phoneHref: "tel:+33142604008",
-  faxDisplay: "+33 (0)1 42 60 30 26",
   email: "praxor@praxor.fr",
+  founded: "1975",
+  foundedDate: "1975-01-01",
+  foundedLong: "1er janvier 1975",
+  legalForm: "SARL",
+  siren: "308 238 393",
+  ape: "69.20Z",
+  activity: "Exercice de la profession d’expert-comptable et de commissaire aux comptes",
   capital: "400 000 €",
   rcs: "RCS Paris 308 238 393",
   coords: "48°52′ N · 2°20′ E",
@@ -194,7 +201,7 @@ export const EXPERTISES: Expertise[] = [
     title: "Reporting",
     summary: "Reporting comptable et opérationnel, au format français, anglo-saxon ou propre à votre groupe.",
     intro:
-      "Le reporting donne aux dirigeants et aux actionnaires une lecture fiable et régulière de l’activité. Nous l’élaborons au format qui vous est utile, et l’articulons avec vos outils de pilotage.",
+      "Le reporting donne une lecture fiable et régulière de l’activité. Nous l’élaborons, comptable comme opérationnel, au format français, anglo-saxon ou propre à votre groupe.",
     groups: [
       {
         items: [
